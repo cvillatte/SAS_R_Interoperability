@@ -1,0 +1,10 @@
+%put Site ------> &SYSSITE;
+%put Release ---> &SYSVER (&SYSVLONG);
+%put System ----> &SYSSCP (&SYSSCPL);
+%put Bitness ---> &SYSADDRBITS; 
+%put SAS Mode --> &SYSPROCESSNAME;
+%put Host ------> &SYSTCPIPHOSTNAME;
+proc options option=(SASUSER CONFIG ENCODING LOCALE MEMSIZE) value; run;
+proc options option=jreoptions; run; 
+%put _AUTOMATIC_;
+proc setinit; run; 
